@@ -8,6 +8,8 @@
 #include <map>
 #include <string>
 
+#include "library_global.h"
+
 /* #define PLAINRLE */
 
 // When bumping the movie version, just bump kCurrentMovieVersionHost.
@@ -104,7 +106,7 @@ class PwMovieWriter
 	PwMovieWriter( FILE *file );
 	~PwMovieWriter();
 
-	void writeFrame( uint32_t timestep,
+    void LIBRARY_SHARED writeFrame( uint32_t timestep,
 					 uint32_t width,
 					 uint32_t height,
 					 uint32_t *rgbBufOld,

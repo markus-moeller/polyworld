@@ -4,11 +4,12 @@
 #include <ostream>
 #include <string>
 
+#include "library_global.h"
 
 typedef std::list<class Monitor *> Monitors;
 typedef std::list<class AgentTracker *> AgentTrackers;
 
-class MonitorManager
+class LIBRARY_SHARED MonitorManager
 {
  public:
 	MonitorManager( class TSimulation *simulation, std::string monitorPath );

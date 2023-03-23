@@ -1,0 +1,79 @@
+#include "AgentTracker.h"
+
+#include "agent/agent.h"
+
+AgentTracker::AgentTracker( std::string _name, const Parms &_parms )
+	: listener( this )
+	, name( _name )
+	, parms( _parms )
+{
+	target = NULL;
+}
+
+AgentTracker::~AgentTracker()
+{
+}
+
+const char *AgentTracker::getName()
+{
+	return name.c_str();
+}
+
+agent *AgentTracker::getTarget()
+{
+	return target;
+}
+
+const AgentTracker::Parms &AgentTracker::getParms()
+{
+	return parms;
+}
+
+std::string AgentTracker::getStateTitle()
+{
+	char buf[128] = "";
+
+	if( target )
+	{
+		const char *prefix = parms.trackTilDeath ? "T" : "";
+
+		switch( parms.mode )
+		{
+		case FITNESS:
+			sprintf( buf, "%s%d:%ld", prefix, parms.fitness.rank, target->Number() );
+			break;
+		case NUMBER:
+			sprintf( buf, "%s:%ld", prefix, target->Number() );
+			break;
+		default:
+			assert(false);
+		}
+	}
+	else
+	{
+		strcpy( buf, "No Agent" );
+	}
+
+	return buf;
+}
+
+void AgentTracker::setTarget( agent *a )
+{
+	if( a != target )
+	{
+		if( target )
+			target->removeListener( &listener );
+
+		target = a;
+
+		if( target )
+			target->addListener( &listener );
+
+		targetChanged( this );
+	}
+}
+
+void AgentTracker::Listener::died( agent *a )
+{
+	tracker->setTarget( NULL );
+}

@@ -18,12 +18,14 @@
 #include <string>
 #include <vector>
 
+#include "drand48.h"
+
 #define nl <<"\n"
 #define pnl <<")\n"
 #define qnl <<"\"\n"
-#define nlf <<"\n"; cout.flush()
-#define pnlf <<")\n"; cout.flush()
-#define qnlf <<"\"\n"; cout.flush()
+#define nlf <<"\n"; std::cout.flush()
+#define pnlf <<")\n"; std::cout.flush()
+#define qnlf <<"\"\n"; std::cout.flush()
 #define comma <<","<<
 #define cms <<", "<<
 #define sp <<" "<<
@@ -85,7 +87,7 @@ inline float fmin(float f1, float f2, float f3, float f4)
 inline float fmin(float f1, float f2, float f3, float f4, float f5)
     { return (f2 < f1) ? fmin(f2, f3, f4, f5) : fmin(f1, f3, f4, f5); }
 
-#define clamp(VAL, MIN, MAX) ((VAL) < (MIN) ? (MIN) : ((VAL) > (MAX) ? (MAX) : (VAL)))
+#define pwclamp(VAL, MIN, MAX) ((VAL) < (MIN) ? (MIN) : ((VAL) > (MAX) ? (MAX) : (VAL)))
 
 
 double logistic(double x, double slope);
@@ -104,8 +106,10 @@ int GetMaximumFiles( long *filecount );
 
 std::vector<std::string> split( const std::string& str, const std::string& delimiters = " " );
 
+// TODO: M_PI wird unter gcc 4.9.4/5.4.0/8.1.0 nicht gefunden
 #ifndef PI
-#define PI M_PI
+#define PI 3.14159265358979323846
+//#define PI M_PI
 #endif /*PI*/
 
 #define TWOPI 6.28318530717059647602

@@ -8,6 +8,7 @@
 
 #include "Nerve.h"
 #include "Sensor.h"
+#include "library_global.h"
 
 class AbstractFile;
 class Brain;
@@ -17,7 +18,7 @@ namespace genome
 	class Genome;
 }
 
-class NervousSystem
+class LIBRARY_SHARED NervousSystem
 {
  public:
 	typedef std::vector<Nerve *> NerveList;

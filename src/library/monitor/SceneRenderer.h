@@ -4,8 +4,9 @@
 #include "graphics/gscene.h"
 #include "graphics/gstage.h"
 #include "utils/Signal.h"
+#include "library_global.h"
 
-class SceneRenderer
+class LIBRARY_SHARED SceneRenderer
 {
  public:
 	class CameraProperties
@@ -18,7 +19,7 @@ class SceneRenderer
 		float fov;
 	};
 
-    static SceneRenderer *create(gstage &stage,
+    static SceneRenderer LIBRARY_SHARED *create(gstage &stage,
                                  const CameraProperties &cameraProps,
                                  int width,
                                  int height);

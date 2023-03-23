@@ -13,8 +13,9 @@
 #include <gl.h>
 
 #include "proplib/proplib.h"
+#include "library_global.h"
 
-struct Color
+struct LIBRARY_SHARED Color
 {
     GLfloat r;
     GLfloat g;

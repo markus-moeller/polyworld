@@ -8,12 +8,12 @@
 #include <map>
 #include <string>
 #include <vector>
-#if __cplusplus >= 201103L
-	#include <functional>
-#else
-	#include <tr1/functional>
-#endif
 
+#if __cplusplus >= 201103L
+    #include <functional>
+#else
+    #include <tr1/functional>
+#endif
 
 #include "misc.h"
 #include "Variant.h"
@@ -158,14 +158,15 @@ class DataLibReader
 	void parseHeader();
 	void parseDigest();
 	void parseTableHeader();
-	void parseLine( const char *line,
+    void parseLine(const char *line, std::function<void (const char *start, const char *end)> callback);
+/*
 #if __cplusplus >= 201103L
-					std::function<void (const char *start,
+                    std::function<void (const char *start,
 #else
-					std::tr1::function<void (const char *start,
+                    std::tr1::function<void (const char *start,
 #endif
-											 const char *end)> callback);
-
+                                             const char *end)> callback);
+*/
  private:
 	FILE *f;
 	bool randomAccess;

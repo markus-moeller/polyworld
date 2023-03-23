@@ -14,8 +14,6 @@
 #include "graphics/graphics.h"
 #include "graphics/gstage.h"
 
-using namespace std;
-
 // Forward declarations
 class BrickPatch;
 class FoodPatch;

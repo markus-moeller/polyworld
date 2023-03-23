@@ -11,8 +11,9 @@ class TSimulation;
 // Putting this macro in a class declaration provides the dynamic properties evaluation function access
 // to private members.
 #define PROPLIB_CPP_PROPERTIES \
-	friend void proplib::CppProperties_Init( proplib::CppProperties::UpdateContext *context ); \
-	friend void proplib::CppProperties_Update( proplib::CppProperties::UpdateContext *context );
+    friend void proplib::CppProperties_Init(proplib::CppProperties::UpdateContext *context); \
+    friend void proplib::CppProperties_Update(proplib::CppProperties::UpdateContext *context); \
+    friend void proplib::CppProperties_GetMetadata(proplib::CppProperties::PropertyMetadata **result_metadata, int *result_count);
 
 namespace proplib
 {
@@ -125,6 +126,7 @@ namespace proplib
 	};
 
 	// These functions are implemented by the generated code.
-	void CppProperties_Init( CppProperties::UpdateContext *context );
-	void CppProperties_Update( CppProperties::UpdateContext *context );
+	void CppProperties_Init(CppProperties::UpdateContext *context);
+	void CppProperties_Update(CppProperties::UpdateContext *context);
+    void CppProperties_GetMetadata(CppProperties::PropertyMetadata **result_metadata, int *result_count);
 }

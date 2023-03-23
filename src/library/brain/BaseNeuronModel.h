@@ -168,7 +168,7 @@ class BaseNeuronModel : public NeuronModel
 		float*	connectionMatrix;
 		short	i,j;
 		long	s;
-		float	maxWeight = max( Brain::config.maxWeight, Brain::config.maxbias );
+        float	maxWeight = std::max( Brain::config.maxWeight, Brain::config.maxbias );
 		double	inverseMaxWeight = 1. / maxWeight;
 		long imin = 10000;
 		long imax = -10000;

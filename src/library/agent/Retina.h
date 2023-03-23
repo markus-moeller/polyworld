@@ -2,12 +2,13 @@
 
 #include "brain/Brain.h"
 #include "brain/Sensor.h"
+#include "library_global.h"
 
 class Nerve;
 class NervousSystem;
 class RandomNumberGenerator;
 
-class Retina : public Sensor
+class LIBRARY_SHARED Retina : public Sensor
 {
  public:
 	Retina( int width );

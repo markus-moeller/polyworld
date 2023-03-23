@@ -25,6 +25,7 @@
 #include "proplib/proplib.h"
 #include "utils/Events.h"
 #include "utils/Signal.h"
+#include "library_global.h"
 
 using namespace sim;
 
@@ -36,7 +37,7 @@ namespace proplib { class Document; }
 // TSimulation
 //===========================================================================
 
-class TSimulation
+class LIBRARY_SHARED TSimulation
 {
 	PROPLIB_CPP_PROPERTIES
 
@@ -74,8 +75,7 @@ public:
 	float getFoodEnergy();
 	GeneStats &getGeneStats();
 
-	void getStatusText( StatusText& statusText,
-						int statusFrequency );
+    void getStatusText(StatusText& statusText, int statusFrequency );
 
 	long getStep() const;
 	long GetMaxSteps() const;
@@ -91,7 +91,6 @@ public:
 	void SetNextLockstepEvent();		// function to read the next event from LOCKSTEP-BirthsDeaths.log
 
 	bool fAdaptivityMode;
-
 
 	static long fStep;
 	static double fFramesPerSecondOverall;
@@ -130,7 +129,6 @@ public:
 	char glFogFunction();
 	float glExpFogDensity();
 	int glLinearFogEnd();
-
 
 	float GetAgentHealingRate();				// Virgil Healing
 
@@ -370,7 +368,6 @@ private:
 
 	int fNumBrickPatches;
 	class BrickPatch* fBrickPatches;
-
 
 	long fMinFoodCount;
 	long fMaxFoodCount;

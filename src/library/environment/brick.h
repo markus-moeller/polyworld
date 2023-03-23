@@ -8,8 +8,6 @@
 // System
 #include <iostream>
 
-using namespace std;
-
 // Local
 #include "BrickPatch.h"
 #include "graphics/gsquare.h"
@@ -36,8 +34,8 @@ class brick : public gboxf
 	brick( Color color, float x, float z );
 	~brick();
     
-	void dump(ostream& out);
-	void load(istream& in);
+    void dump(std::ostream& out);
+    void load(std::istream& in);
     
 	float pickup(float e);
 

@@ -1,8 +1,9 @@
 #pragma once
 
 #include "graphics/gcamera.h"
+#include "library_global.h"
 
-class CameraController
+class LIBRARY_SHARED CameraController
 {
  public:
 	class RotationParms

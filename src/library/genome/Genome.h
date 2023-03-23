@@ -41,7 +41,7 @@ namespace genome
 		Scalar get( const char *name );
 		Scalar get( Gene *gene );
 
-		unsigned int get_raw_uint( long byte );
+        unsigned int get_raw_uint( long xbyte );
 		void updateSum( unsigned long *sum, unsigned long *sum2 );
 
 		void seed( Gene *gene,
@@ -58,7 +58,7 @@ namespace genome
 
 		void mutateBits( float rate );
 		void mutateBits();
-		void mutateOneByte( long byte, float stdev );
+        void mutateOneByte( long xbyte, float stdev );
 		void mutateBytes( float rate );
 		void mutateBytes();
 		void mutate( float rate );

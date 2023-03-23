@@ -10,7 +10,7 @@
 #include "NeuronModel.h"
 #include "proplib/proplib.h"
 #include "utils/objectlist.h"
-
+#include "library_global.h"
 
 #define DebugBrainGrow false
 #if DebugBrainGrow
@@ -45,7 +45,7 @@ class NeuronModel;
 //===========================================================================
 // Brain
 //===========================================================================
-class Brain
+class LIBRARY_SHARED Brain
 {
 public:
 	static struct Configuration

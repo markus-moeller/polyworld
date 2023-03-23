@@ -5,6 +5,7 @@
 #include <string>
 
 #include "expression.h"
+#include "library_global.h"
 
 class InterpreterProcess;
 
@@ -17,7 +18,7 @@ namespace proplib
 	// --- Manages python interpreter.
 	// ----------------------------------------------------------------------
 	// ----------------------------------------------------------------------
-	class Interpreter
+    class LIBRARY_SHARED Interpreter
 	{
 	public:
 		// ----------------------------------------------------------------------

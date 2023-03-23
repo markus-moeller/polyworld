@@ -1,8 +1,9 @@
 #pragma once
 
 #include "utils/Signal.h"
+#include "library_global.h"
 
-class AgentPovRenderer
+class LIBRARY_SHARED AgentPovRenderer
 {
  protected:
     AgentPovRenderer() {}
@@ -11,7 +12,7 @@ class AgentPovRenderer
     static AgentPovRenderer *create( int maxAgents,
                                      int retinaWidth,
                                      int retinaHeight );
-	virtual ~AgentPovRenderer() {}
+    virtual ~AgentPovRenderer() {}
 
 	virtual void add( class agent *a ) = 0;
 	virtual void remove( class agent *a ) = 0;

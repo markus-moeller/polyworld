@@ -11,9 +11,6 @@
 #include "graphics/gobject.h"
 #include "proplib/cppprops.h"
 
-using namespace std;
-
-
 //===========================================================================
 // Sorted list of all objects: agents, food, bricks, other.
 //===========================================================================
@@ -50,7 +47,7 @@ class objectxsortedlist : public gdlist<gobject*>
     void toMark( int objType );
     void getMark( int objType, gobject* gob );
 
-    static objectxsortedlist gXSortedObjects;
+    static LIBRARY_SHARED objectxsortedlist gXSortedObjects;
 };
 
 #define xfor( TYPE, VARTYPE, VAR )										\

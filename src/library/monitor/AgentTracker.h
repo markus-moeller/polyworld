@@ -4,9 +4,9 @@
 
 #include "agent/AgentListener.h"
 #include "utils/Signal.h"
+#include "library_global.h"
 
-
-class AgentTracker
+class LIBRARY_SHARED AgentTracker
 {
  public:
 

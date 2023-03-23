@@ -28,4 +28,3 @@ private:
 private slots:
     void draw();
 };
-

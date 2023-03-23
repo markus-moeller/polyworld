@@ -4,10 +4,8 @@
 // STL
 #include <list>
 
-using namespace std;
-
 template<class T>
-class ObjectList : public list<T>
+class ObjectList : public std::list<T>
 {
 
 public:
@@ -20,6 +18,5 @@ public:
 	virtual void Remove(T* pitem) { this->remove(*pitem); }
 
 };
-
 
 #endif

@@ -10,12 +10,12 @@
 #include "sim/simtypes.h"
 #include "utils/datalib.h"
 #include "utils/Signal.h"
-
+#include "library_global.h"
 
 //===========================================================================
 // Monitor
 //===========================================================================
-class Monitor
+class LIBRARY_SHARED Monitor
 {
  public:
 	enum Type
@@ -147,7 +147,7 @@ class PopulationMonitor : public ChartMonitor
 //===========================================================================
 // BrainMonitor
 //===========================================================================
-class BrainMonitor : public Monitor
+class LIBRARY_SHARED BrainMonitor : public Monitor
 {
  public:
 	BrainMonitor( class TSimulation *_sim, int _frequency, class AgentTracker *_tracker );
@@ -166,7 +166,7 @@ class BrainMonitor : public Monitor
 //===========================================================================
 // PovMonitor
 //===========================================================================
-class PovMonitor : public Monitor
+class LIBRARY_SHARED PovMonitor : public Monitor
 {
  public:
 	PovMonitor( class TSimulation *_sim );
@@ -179,7 +179,7 @@ class PovMonitor : public Monitor
 //===========================================================================
 // StatusTextMonitor
 //===========================================================================
-class StatusTextMonitor : public Monitor
+class LIBRARY_SHARED StatusTextMonitor : public Monitor
 {
  public:
 	StatusTextMonitor( class TSimulation *sim,
@@ -232,7 +232,7 @@ class FarmMonitor : public Monitor
 //===========================================================================
 // SceneMonitor
 //===========================================================================
-class SceneMonitor : public Monitor
+class LIBRARY_SHARED SceneMonitor : public Monitor
 {
  public:
 	SceneMonitor( class TSimulation *sim,

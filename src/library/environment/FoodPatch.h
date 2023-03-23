@@ -15,8 +15,6 @@
 #include "graphics/gstage.h"
 #include "proplib/cppprops.h"
 
-using namespace std;
-
 // Forward declarations
 class food;
 class FoodPatch;

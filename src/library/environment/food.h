@@ -12,8 +12,6 @@
 #include <iostream>
 #include <list>
 
-using namespace std;
-
 // Local
 #include "Energy.h"
 #include "FoodPatch.h"
@@ -39,7 +37,7 @@ public:
 	static float gCarryFood2Energy;
 	static long gMaxLifeSpan;
 
-	typedef list<food *> FoodList;
+    typedef std::list<food *> FoodList;
 	static FoodList gAllFood;
 
     food( const FoodType *foodType, long step );
@@ -47,8 +45,8 @@ public:
     food( const FoodType *foodType, long step, const Energy &e, float x, float z);
     ~food();
 
-	void dump(ostream& out);
-	void load(istream& in);
+    void dump(std::ostream& out);
+    void load(std::istream& in);
 
 	Energy eat(const Energy &e);
 

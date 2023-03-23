@@ -1,6 +1,10 @@
 #pragma once
 
-#include <functional>
+#if __cplusplus >= 201103L
+    #include <functional>
+#else
+    #include <tr1/functional>
+#endif
 #include <list>
 
 namespace util

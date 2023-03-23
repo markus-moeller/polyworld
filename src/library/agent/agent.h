@@ -391,7 +391,7 @@ inline float agent::VelocityY() { return fVelocity[1]; }
 inline float agent::VelocityZ() { return fVelocity[2]; }
 inline float agent::Speed() { return fSpeed; }
 inline float agent::MaxSpeed() { return fMaxSpeed; }
-inline float agent::NormalizedSpeed() { return min( 1.0f, Speed() / agent::config.maxVelocity ); }
+inline float agent::NormalizedSpeed() { return std::min( 1.0f, Speed() / agent::config.maxVelocity ); }
 inline float agent::Mass() { return fMass; }
 inline float agent::SizeAdvantage() { return fSizeAdvantage; }
 inline const Metabolism *agent::GetMetabolism() { return fMetabolism; }

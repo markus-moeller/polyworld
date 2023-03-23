@@ -1,12 +1,14 @@
 #pragma once
 
+#include "library_global.h"
+
 //===========================================================================
 // AgentAttachedData
 //
 // Allows for data to be associated with an agent without having to declare
 // additional fields in the agent class.
 //===========================================================================
-class AgentAttachedData
+class LIBRARY_SHARED AgentAttachedData
 {
  public:
 	typedef unsigned int SlotHandle;

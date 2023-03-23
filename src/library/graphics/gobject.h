@@ -44,8 +44,6 @@
 // Then change object carrying to be for gobject3D objects only, using a gObject3DList to hold them,
 // so it isn't necessary to special case for object type certain places.
 
-using namespace std;
-
 //===========================================================================
 // gobject
 //===========================================================================

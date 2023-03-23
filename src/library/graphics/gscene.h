@@ -10,6 +10,8 @@
 // System
 #include <stdlib.h>
 
+#include "library_global.h"
+
 // Forward declarations
 class frustumXZ;
 class gcamera;
@@ -19,7 +21,7 @@ class gstage;
 //===========================================================================
 // gscene
 //===========================================================================
-class gscene
+class LIBRARY_SHARED gscene
 {
 public:
     gscene();

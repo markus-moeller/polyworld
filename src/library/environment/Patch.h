@@ -17,9 +17,6 @@
 #define LINEAR 1
 #define GAUSSIAN 2
 
-using namespace std;
-
-
 // Forward declarations
 class Patch;
 class Domain;
