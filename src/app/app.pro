@@ -1,5 +1,6 @@
 QT       += core gui opengl
 DEFINES += CORE_UTILS=\\\"C:\\\\\\\\mingw\\\\\\\\coreutils-5.3.0\\\\\\\\bin\\\"
+CONFIG += console
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
